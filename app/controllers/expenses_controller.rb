@@ -1,5 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: [:show, :edit, :update, :destroy]
+  before_action :load_categories, only: [:new, :edit, :create, :update]
 
   # GET /expenses
   # GET /expenses.json
@@ -62,6 +63,10 @@ class ExpensesController < ApplicationController
   end
 
   private
+    def load_categories
+      @categories = Category.all.map{ |u| [ u.name, u.id ] }
+    end
+    
     # Use callbacks to share common setup or constraints between actions.
     def set_expense
       @expense = Expense.find(params[:id])
