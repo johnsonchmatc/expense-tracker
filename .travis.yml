@@ -3,4 +3,4 @@ rvm:
   - 2.3.0
 script:
   - bundle install --without production
-  - rails test
+  - bundle exec rails test
