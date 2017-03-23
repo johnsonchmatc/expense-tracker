@@ -4,3 +4,7 @@ rvm:
 script:
   - bundle install --without production
   - bundle exec rails test
+on-success:
+  - ./ci/success
+on-failure:
+  - ./ci/failure
