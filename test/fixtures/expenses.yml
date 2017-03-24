@@ -1,15 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  category_id: <%= Category.first.id %>
-  title: MyString
-  description: MyText
-  date: 2017-01-24
-  amount: 1.5
-
-two:
-  category_id: <%= Category.first.id %>
-  title: MyString
+gas:
+  title: gas 
   description: MyText
   date: 2017-01-24
   amount: 1.5

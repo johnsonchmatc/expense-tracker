@@ -2,7 +2,9 @@ require 'test_helper'
 
 class ExpensesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @expense = expenses(:one)
+    @expense = expenses(:gas)
+    @expense.category = categories(:automotive)
+    @expense.save
   end
 
   test "should get index" do
